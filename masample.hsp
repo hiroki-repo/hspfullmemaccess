@@ -1,0 +1,13 @@
+#include "memaccess.as"
+test="ample"
+mes mempeek(varptr(test))
+mempoke varptr(test)+0,'g'
+mempoke varptr(test)+1,'o'
+mempoke varptr(test)+2,'o'
+mempoke varptr(test)+3,'d'
+mempoke varptr(test)+4,'e'
+mempoke varptr(test)+5,'s'
+mempoke varptr(test)+6,'t'
+sdim abctest,64
+memmemcpy varptr(abctest),varptr(test),strlen(test)
+mes abctest
