@@ -66,8 +66,14 @@ return lpeek(fullaccessablemem1,prm_1x)
 return
 
 #deffunc memmemcpy int prm_1,int prm_2,int prm_3
-repeat prm_3
-mempeek prm_1+cnt,mempoke(prm_2+cnt)
+prm_1x=0
+prm_1x=prm_1
+prm_2x=0
+prm_2x=prm_2
+prm_3x=0
+prm_3x=prm_3
+repeat prm_3x
+mempoke prm_1x+cnt,mempeek(prm_2x+cnt)
 loop
 return
 #global
